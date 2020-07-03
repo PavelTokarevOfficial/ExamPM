@@ -140,6 +140,7 @@
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(100, 26);
             this.textBoxPhone.TabIndex = 9;
+            this.textBoxPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
             // 
             // listViewPharmacy
             // 

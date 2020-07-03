@@ -19,6 +19,15 @@ namespace ExamPM
             ComboBoxShowPharmacy();
             ShowAccounting();
         }
+
+        private void OnlyNumber(object sender, KeyPressEventArgs e)
+        {
+            char sym = e.KeyChar;
+            if (!Char.IsDigit(sym) && sym != 8 || sym == 127)
+            {
+                e.Handled = true;
+            }
+        }
         void ComboBoxShowMedicine()
         {
             comboBoxMedecine.Items.Clear();

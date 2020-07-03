@@ -17,7 +17,14 @@ namespace ExamPM
             InitializeComponent();
             ShowPharrmacy();
         }
-
+        private void OnlyNumber(object sender, KeyPressEventArgs e)
+        {
+            char sym = e.KeyChar;
+            if (!Char.IsDigit(sym) && sym != 8 || sym == 127)
+            {
+                e.Handled = true;
+            }
+        }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             Pharmacy pharmacy = new Pharmacy();
